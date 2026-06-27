@@ -263,9 +263,9 @@ def get_pipe(model_name, device=None, low_vram=True):
         print("\tUSING PIPE DEVICE WITH CPU OFFLOADING",device)
         pipe=pipe.to('cpu')
         pipe.enable_sequential_cpu_offload(device=device)
+        pipe.vae.enable_tiling()
+        pipe.vae.enable_slicing()
 
-    # pipe.vae.enable_tiling()
-    # pipe.vae.enable_slicing()
 
     # Metadata
     pipe.lora_name = lora_name
