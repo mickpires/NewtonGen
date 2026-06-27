@@ -566,19 +566,21 @@ def main(
 if __name__ == "__main__":
 
     # Parabolic Motion
+    # prompt_list = [
+    # "A single apple is thrown at an angle with an initial speed. The camera captures the motion from the side, showing the apple rising, reaching its peak, and then descending under gravity. The scene takes place in a bright open field under a clear blue sky, with soft sunlight casting gentle shadows on the ground. The background shows green grass and distant trees, adding depth and realism.",
+    # "A single coconut is thrown at an angle with an initial speed. The camera captures the motion from the side, showing the coconut rising, reaching its peak, and then descending under gravity. The scene takes place on a bright open beach under a clear blue sky. The background shows white sand and the sea, adding depth and realism.",
+    # "A soccer ball is kicked at an angle with an initial speed. The camera captures the motion from the side, showing the ball rising, reaching its peak, and descending under gravity. The scene takes place on a sunlit football field with green grass, white boundary lines, and distant goalposts visible in the background, adding depth and realism.",
+    # "A basketball is thrown at an angle towards a hoop. The camera captures the side view of the ball rising, reaching its apex, and descending towards the basket. The scene takes place in an indoor gym with polished wooden floors, overhead lights reflecting on the court, and bleachers in the background.",
+    # "An orange is tossed at an angle with an initial speed. The camera captures the motion from the side, showing it rising and then falling under gravity. The scene is set in a sunny backyard with a wooden fence and flowerbeds in the background.",
+    # "A tennis ball is thrown at an angle, captured from a fixed side camera, showing the parabolic trajectory. The scene takes place on an outdoor tennis court with net, lines, and surrounding trees visible in the distance under bright sunlight.",
+    # "A baseball is thrown at an angle with an initial speed. The camera captures its flight from the side, rising and then descending. The scene is set on a baseball field, with dirt infield and green outfield grass, and stadium seats faintly visible in the background.",
+    # "An American football is kicked at an angle with initial speed. The camera captures the side view, showing the ball rising and descending along a parabolic trajectory. The scene is set on a sunny football field with goalposts in the distance.",
+    # "A volleyball is served at an angle, captured from the side by a stationary camera. The scene is set on an outdoor beach volleyball court, with sand texture, net, and distant palm trees in view.",
+    # "A watermelon is thrown at an angle in a park, captured from a fixed side camera, rising and descending along a parabolic path. The scene shows green grass, a few park benches, and trees in the background under bright daylight.",
+    # ]
+    
     prompt_list = [
-    "A single apple is thrown at an angle with an initial speed. The camera captures the motion from the side, showing the apple rising, reaching its peak, and then descending under gravity. The scene takes place in a bright open field under a clear blue sky, with soft sunlight casting gentle shadows on the ground. The background shows green grass and distant trees, adding depth and realism.",
-    "A single coconut is thrown at an angle with an initial speed. The camera captures the motion from the side, showing the coconut rising, reaching its peak, and then descending under gravity. The scene takes place on a bright open beach under a clear blue sky. The background shows white sand and the sea, adding depth and realism.",
-    "A soccer ball is kicked at an angle with an initial speed. The camera captures the motion from the side, showing the ball rising, reaching its peak, and descending under gravity. The scene takes place on a sunlit football field with green grass, white boundary lines, and distant goalposts visible in the background, adding depth and realism.",
-    "A basketball is thrown at an angle towards a hoop. The camera captures the side view of the ball rising, reaching its apex, and descending towards the basket. The scene takes place in an indoor gym with polished wooden floors, overhead lights reflecting on the court, and bleachers in the background.",
-    "An orange is tossed at an angle with an initial speed. The camera captures the motion from the side, showing it rising and then falling under gravity. The scene is set in a sunny backyard with a wooden fence and flowerbeds in the background.",
-    "A tennis ball is thrown at an angle, captured from a fixed side camera, showing the parabolic trajectory. The scene takes place on an outdoor tennis court with net, lines, and surrounding trees visible in the distance under bright sunlight.",
-    "A baseball is thrown at an angle with an initial speed. The camera captures its flight from the side, rising and then descending. The scene is set on a baseball field, with dirt infield and green outfield grass, and stadium seats faintly visible in the background.",
-    "An American football is kicked at an angle with initial speed. The camera captures the side view, showing the ball rising and descending along a parabolic trajectory. The scene is set on a sunny football field with goalposts in the distance.",
-    "A volleyball is served at an angle, captured from the side by a stationary camera. The scene is set on an outdoor beach volleyball court, with sand texture, net, and distant palm trees in view.",
-    "A watermelon is thrown at an angle in a park, captured from a fixed side camera, rising and descending along a parabolic path. The scene shows green grass, a few park benches, and trees in the background under bright daylight.",
-    ]
-
+    "A single apple is thrown at an angle with an initial speed. The camera captures the motion from the side, showing the apple rising, reaching its peak, and then descending under gravity. The scene takes place in a bright open field under a clear blue sky, with soft sunlight casting gentle shadows on the ground. The background shows green grass and distant trees, adding depth and realism."]
     ## for 3D motion
     # prompt_list = [
     # "A small metal cube slides from the distance along a laboratory bench towards the camera, reflections visible on the surface, scattered tools in the background, captured from a fixed oblique side camera.",
