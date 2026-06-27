@@ -9,7 +9,7 @@ from models.nnd import NewtonODELatent
 import rp
 
 DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
-MODEL_PATH = Path("to/learned_dynamics/learnedODE_parabolic_motion_with_rotation.pth")
+MODEL_PATH = Path("learned_dynamics/learnedODE_parabolic_motion_with_rotation.pth")
 
 
 config_list = [
