@@ -193,12 +193,12 @@ random.seed(seed)
 #)
 
 pipe_ids = dict(
-    T2V5B="/home/to/THUT2V5b/ckpts/",
+    T2V5B="/workspace/NewtonGen/weights/CogVideoX-5b",
 )
 
 # From a bird's-eye view, a serene scene unfolds: a herd of deer gracefully navigates shallow, warm-hued waters, their silhouettes stark against the earthy tones. The deer, spread across the frame, cast elongated, well-defined shadows that accentuate their antlers, creating a mesmerizing play of light and dark. This aerial perspective captures the tranquil essence of the setting, emphasizing the harmonious contrast between the deer and their mirror-like reflections on the water's surface. The composition exudes a peaceful stillness, yet the subtle movement suggested by the shadows adds a dynamic layer to the natural beauty and symmetry of the moment.
 lora_urls = dict(
-    T2V5B_blendnorm_i18000_DATASET_lora_weights   = '/home/to/lora_models/T2V5B_blendnorm_i18000_DATASET_lora_weights.safetensors',
+    T2V5B_blendnorm_i18000_DATASET_lora_weights   = '/workspace/NewtonGen/weights/Go-with-the-Flow/T2V5B_blendnorm_i18000_DATASET_lora_weights.safetensors',
 )
 
 
