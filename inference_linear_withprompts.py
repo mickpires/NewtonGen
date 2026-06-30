@@ -176,7 +176,6 @@ for cfg in config_list:
     )
 
 
-
     # ---------------- STEP 3: generate videos ----------------
     # revised from https://github.com/Eyeline-Labs/Go-with-the-Flow/blob/main/cut_and_drag_inference.py
 import torch
@@ -695,7 +694,9 @@ if __name__ == "__main__":
     outputs = []
 
     for cfg in config_list:
-        sample_path = f"inference/3dmove/NoiseWarp_{cfg['output_name']}" 
+        #sample_path = f"inference/3dmove/NoiseWarp_{cfg['output_name']}" 
+        sample_path = noisewarp_out["output_folder"]
+
 
         for i, prompt in enumerate(prompt_list):
             output_mp4_path = f"inference/3dmove/{cfg['output_name']}_prompt{i+1}.mp4"
