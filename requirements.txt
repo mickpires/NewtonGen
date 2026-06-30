@@ -1,4 +1,4 @@
---index-url https://download.pytorch.org/whl/cu118
+--extra-index-url https://download.pytorch.org/whl/cu118
 rp
 torch 
 torchvision
@@ -7,7 +7,7 @@ einops
 easydict
 transformers
 accelerate
-oldest-supported-numpy
+numpy>=1.23.5,<2.5
 sentencepiece
 peft
 opencv-contrib-python
@@ -16,3 +16,8 @@ fire
 moviepy
 icecream
 matplotlib
+torchdiffeq
+py3nvml
+av
+tiktoken
+protobuf
