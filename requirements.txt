@@ -7,7 +7,7 @@ einops
 easydict
 transformers
 accelerate
-numpy>=1.23.5,<2.5
+numpy==1.21.6
 sentencepiece
 peft
 opencv-contrib-python

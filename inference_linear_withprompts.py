@@ -9,6 +9,24 @@ from matplotlib.path import Path as MplPath
 from models.nnd import NewtonODELatent
 import rp
 
+# 1. Guardamos uma referência para a função original de salvar vídeo
+_original_save_video_mp4 = rp.save_video_mp4
+
+# 2. Criamos uma função customizada que intercepta e corrige o bitrate
+def _custom_save_video_mp4(*args, **kwargs):
+    # Se o código tentar usar "max", substituímos por um valor inteiro seguro (ex: 5 Mbps)
+    if kwargs.get('video_bitrate') == 'max':
+        kwargs['video_bitrate'] = 5000000  # 5000000 bps = 5M bps
+    
+    # Opcional: Se o erro persistir devido ao encoder 'av', você pode forçar o backend sugerido:
+    #kwargs['backend'] = 'imageio'
+    
+    return _original_save_video_mp4(*args, **kwargs)
+
+# 3. Substituímos a função global da biblioteca pela nossa versão corrigida
+rp.save_video_mp4 = _custom_save_video_mp4
+
+
 DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
 MODEL_PATH = Path("learned_dynamics/learnedODE_parabolic_motion.pth")
 
@@ -468,6 +486,7 @@ def run_pipe(
     return rp.gather_vars('video output_mp4_path  cartridge subfolder')
 
 
+
 def main(
     sample_path,
     output_mp4_path:str,
@@ -563,6 +582,7 @@ def main(
 
 
 
+
 if __name__ == "__main__":
 
     # Parabolic Motion
@@ -580,7 +600,8 @@ if __name__ == "__main__":
     # ]
     
     prompt_list = [
-    "A single apple is thrown at an angle with an initial speed. The camera captures the motion from the side, showing the apple rising, reaching its peak, and then descending under gravity. The scene takes place in a bright open field under a clear blue sky, with soft sunlight casting gentle shadows on the ground. The background shows green grass and distant trees, adding depth and realism."]
+    "A single apple is thrown at an angle with an initial speed. The camera captures the motion from the side, showing the apple rising, reaching its peak, and then descending under gravity. The scene takes place in a bright open field under a clear blue sky, with soft sunlight casting gentle shadows on the ground. The background shows green grass and distant trees, adding depth and realism."
+    ]
     ## for 3D motion
     # prompt_list = [
     # "A small metal cube slides from the distance along a laboratory bench towards the camera, reflections visible on the surface, scattered tools in the background, captured from a fixed oblique side camera.",
