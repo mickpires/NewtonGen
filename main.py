@@ -1,27 +1,35 @@
 from inference_linear_withprompts import main
 
-prompt = "A single apple is thrown at an angle with an initial speed. The camera captures the motion from the side, showing the apple rising, reaching its peak, and then descending under gravity. The scene takes place in a bright open field under a clear blue sky, with soft sunlight casting gentle shadows on the ground. The background shows green grass and distant trees, adding depth and realism."
+# ==========================
+# CONFIGURAÇÃO
+# ==========================
 
-config_list = [
-    dict(
-        z0=[6.9901, 9.3459, 5.558, -4.8493, 0.0, 0.0, 0.594, 0.7497, 0.4453],
-        DT=0.02,
-        METER_PER_PX=0.05,
-        chosen_shape="circle",
-        output_name="set_a"
-    ),
-    dict(
-        z0=[7.2499, 9.9899, 5.4111, -2.2692, 0.0, 0.0, 1.5469, 2.6043, 0.3305],
-        DT=0.02,
-        METER_PER_PX=0.05,
-        chosen_shape="rectangle",
-        output_name="set_b"
-    ),
-    dict(
-        z0=[7.3491, 8.542, 4.4844, -2.0627, 0.0, 0.0, 1.6509, 2.745, 0.4849],
-        DT=0.02,
-        METER_PER_PX=0.05,
-        chosen_shape="circle",
-        output_name="set_c"
-    ),
-]
+EXPERIMENT_NAME = "metal2_test"
+
+PROMPT = "A metal block sliding quickly down an inclined steel ramp in a laboratory, reflections on the shiny surface, equipment and cables in the background, captured from a fixed side camera parallel to the ramp."
+
+SAMPLE_PATH = "inference/3dmove/NoiseWarp_set_a_copy6"
+
+MODEL_NAME = "T2V5B_blendnorm_i18000_DATASET_lora_weights"
+
+# ==========================
+# EXECUÇÃO
+# ==========================
+
+OUTPUT_MP4 = f"output/{EXPERIMENT_NAME}.mp4"
+
+main(
+    sample_path=SAMPLE_PATH,
+    output_mp4_path=OUTPUT_MP4,
+    prompt=PROMPT,
+    degradation=0.5,
+    model_name=MODEL_NAME,
+    low_vram=True,
+    device=None,
+    noise_downtemp_interp="nearest",
+    image=None,
+    num_inference_steps=30,
+    guidance_scale=6,
+)
+
+print(f' video gerado está em {OUTPUT_MP4}')

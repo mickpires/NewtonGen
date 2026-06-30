@@ -599,7 +599,7 @@ if __name__ == "__main__":
     # ]
     
     prompt_list = [
-    "A single apple is thrown at an angle with an initial speed. The camera captures the motion from the side, showing the apple rising, reaching its peak, and then descending under gravity. The scene takes place in a bright open field under a clear blue sky, with soft sunlight casting gentle shadows on the ground. The background shows green grass and distant trees, adding depth and realism."
+    "A metal block sliding quickly down an inclined steel ramp in a laboratory, reflections on the shiny surface, equipment and cables in the background, captured from a fixed side camera parallel to the ramp."
     ]
     ## for 3D motion
     # prompt_list = [
