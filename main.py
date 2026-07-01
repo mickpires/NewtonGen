@@ -4,11 +4,11 @@ from inference_linear_withprompts import main
 # CONFIGURAÇÃO
 # ==========================
 
-EXPERIMENT_NAME = "metal2_test"
+EXPERIMENT_NAME = "soccer_test"
 
-PROMPT = "A metal block sliding quickly down an inclined steel ramp in a laboratory, reflections on the shiny surface, equipment and cables in the background, captured from a fixed side camera parallel to the ramp."
+PROMPT = "A soccer ball is kicked at an angle with an initial speed. The camera captures the motion from the side, showing the ball rising, reaching its peak, and descending under gravity. The scene takes place on a sunlit football field with green grass, white boundary lines, and distant goalposts visible in the background, adding depth and realism."
 
-SAMPLE_PATH = "inference/3dmove/NoiseWarp_set_a_copy6"
+SAMPLE_PATH = "inference/3dmove/NoiseWarp_set_a"
 
 MODEL_NAME = "T2V5B_blendnorm_i18000_DATASET_lora_weights"
 
